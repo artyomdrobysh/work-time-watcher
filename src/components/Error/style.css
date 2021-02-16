@@ -1,0 +1,12 @@
+div.error {
+    background-color: rgba(245, 188, 188, 1);
+
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    word-break: break-all;
+
+    max-width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}

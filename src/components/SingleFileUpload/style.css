@@ -1,0 +1,103 @@
+div.file-upload {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.file-upload div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+div.file-upload div i {
+    background-image: url("../../static/assets/images/file.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: block;
+    padding: 20px;
+    width: 100%;
+}
+
+div.file-upload label.select-file-btn {
+    width: 120px;
+    border: 2px dashed grey;
+    border-radius: 5px;
+    display: block;
+    padding: 10px 5px;
+    margin: 0;
+
+    cursor: pointer;
+    text-align: center;
+
+    transition: border 300ms ease;
+}
+
+div.file-upload label.select-file-btn input {
+    pointer-events: none;
+    user-select: none;
+
+    outline: 0;
+    opacity: 0;
+    width: 0;
+}
+
+div.file-upload label.select-file-btn i {
+    display: block;
+    padding-bottom: 16px;
+    opacity: 0.5;
+
+    font-size: 42px;
+
+    transition: opacity 300ms;
+}
+
+div.file-upload label.select-file-btn span.title {
+    color: grey;
+
+    transition: 200ms color;
+}
+
+div.file-upload label.select-file-btn:hover {
+    border: 2px solid black;
+}
+
+div.file-upload label.select-file-btn:hover span.title {
+    color: black;
+}
+
+div.file-upload label.select-file-btn:hover i {
+    opacity: 1;
+}
+
+div.file-upload label.select-file-btn i {
+    background-image: url("../../static/assets/images/file_upload.ico");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 100%;
+}
+
+div.file-upload button {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+
+    margin-top: 10px;
+    outline: 0;
+    padding: 15px;
+    border: none;
+    
+    background-color: rgba(122, 184, 255, 1);
+}
+
+div.file-upload button:active {
+    color: white;
+}
