@@ -4,25 +4,29 @@ import {
     Route,
 } from 'react-router-dom';
 
-import Home from '../home/Home';
-import Loader from '../../shared/components/loader/Loader';
-import ErrorBoundary from '../../shared/components/error/ErrorBoundary';
-import Layout from '../layout/Layout';
-import '../../shared/styles/body.css';
+import Home from '../../pages/Home/Home';
+import ErrorBoundary from '../../components/Error/ErrorBoundary';
+import Layout from '../../components/Layout/Layout';
+import Loader from '../../components/Loader/Loader';
+import ROUTES from '../../services/routes/routes-config';
+import ninjaLogo from '../../static/assets/images/ninja_logo.png';
+import '../../static/assets/styles/common.css';
 
-const TimeLogDashboardLazy = React.lazy(() => import(/* webpackChunkName: 'time-log-dashboard */ '../timeLogDashboard/TimeLogDashboard'));
+const TimeLogDashboardLazy = React.lazy(() => import('../../pages/TimeLogDashboard/TimeLogDashboard'));
+
+const routesArr = Object.entries(ROUTES).map(([key, val]) => val);
 
 const App = () => (
-    <Layout>
+    <Layout routes={routesArr} logo={{ source: ninjaLogo, title: 'ninja' }}>
         <Switch>
-            <Route path="/time-log-dashboard">
+            <Route path={ROUTES.TIME_LOG_DASHBOARD.path} exact={ROUTES.TIME_LOG_DASHBOARD.exact}>
                 <ErrorBoundary>
                     <Suspense fallback={<Loader />}>
                          <TimeLogDashboardLazy />
                     </Suspense>
                 </ErrorBoundary>
             </Route>
-            <Route path="/">
+            <Route path={ROUTES.HOME.path} exact={ROUTES.HOME.exact}>
                 <Home />
             </Route>
         </Switch>
