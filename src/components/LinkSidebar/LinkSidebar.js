@@ -15,9 +15,9 @@ const LinkSidebar = ({ items, className }) => {
     const { url } = useRouteMatch();
     
     return (
-        <aside className={`${className} ${isOpen ? 'open' : ''}`}>
-            <button type="button" onClick={memoizedChangeAsideDisplay}>
-                {isOpen ? String.fromCodePoint(10005) : String.fromCodePoint(9776)}
+        <aside className={`${className} ${isOpen && items.length > 0 ? 'open' : ''}`}>
+            <button type="button" onClick={memoizedChangeAsideDisplay} disabled={items.length <= 0}>
+                {isOpen && items.length > 0 ? String.fromCodePoint(10005) : String.fromCodePoint(9776)}
             </button>
             <ul>
                 {items.map((item) => (
