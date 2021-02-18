@@ -1,16 +1,20 @@
 div.log-in-out-field {
     padding: 10px;
-    max-width: 200px;
+    max-width: 170px;
     border-radius: 5px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 div.log-in-out-field.in {
-    background-color: rgba(203, 242, 177, 0.3);
+    background-color: rgb(0, 255, 0);
+
+    color: black;
 }
 
 div.log-in-out-field.out {
-    background-color: rgba(245, 181, 181, 0.5);
+    background-color: red;
+
+    color: white;
 }
 
 div.log-in-out-field span {
@@ -22,7 +26,5 @@ div.log-in-out-field span {
 }
 
 div.log-in-out-field span:first-child {
-    font-weight: bold;
-    
     margin-bottom: 5px;
 }
