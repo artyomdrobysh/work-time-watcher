@@ -1,9 +1,9 @@
 const devConfig = {
-    timeLogServiceApi: 'http://localhost:8080'
+    timeLogServiceApi: 'http://localhost:8083'
 };
 
 const prodConfig = {
-    timeLogServiceApi: 'http://localhost:8080'
+    timeLogServiceApi: 'http://localhost:8083'
 };
 
 const nodeEnv = process.env.NODE_ENV;
